@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./styles/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./styles/styles.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+        <title>Earth, Wind and Fire</title>
+    </head>
+
+    <body>
+        <header class="dark p-1">
+            <h1 class="text-center text-light">Earth, Wind and Fire</h1>
+        </header>
+
+        <!-- <nav class="dark">
+
+        </nav> -->
+        <div id="page-container">
+            <div id="content-wrap">
+                <section class="d-flex justify-content-center mt-3">
+                    <div class="w-25 border shadow p-3 bg-body rounded">
+                        <div>
+                            <p class="text-center fw-bold">
+                                How to play?
+                            </p>
+                        </div>
+                        <div
+                            class="d-flex flex-row justify-content-evenly mt-3 border border-2 pt-2 pb-2 rounded border-warning">
+                            <img src="/images/earth.svg" class="inline-img" alt="" srcset="">
+                            <p class="align-self-center"><span class="fw-bold text-warning">Earth</span> beats <span
+                                    class="fw-light">Wind</span></p>
+                            <img src="/images/wind.svg" class="inline-img" alt="" srcset="">
+                        </div>
+                        <div
+                            class="d-flex flex-row justify-content-evenly mt-2 border border-2 pt-2 pb-2 rounded border-info">
+                            <img src="/images/wind.svg" class="inline-img" alt="" srcset="">
+                            <p class="align-self-center"><span class="fw-bold text-info">Wind</span> beats Fire</p>
+                            <img src="/images/fire.svg" class="inline-img" alt="" srcset="">
+                        </div>
+                        <div
+                            class="d-flex flex-row justify-content-evenly mt-2 border border-2 pt-2 pb-2 rounded border-danger">
+                            <img src="/images/fire.svg" class="inline-img" alt="" srcset="">
+                            <p class="align-self-center"><span class="fw-bold text-danger">Fire</span> beats Earth</p>
+                            <img src="/images/earth.svg" class="inline-img" alt="" srcset="">
+                        </div>
+                        <!-- Move below to different area of page -->
+                    </div>
+                </section>
+
+                <section class="d-flex justify-content-evenly mt-3">
+                    <div class="w-25 border shadow bg-body rounded" data-bs-toggle="tooltip" data-bs-placement="top"
+                        title="Your Score">
+                        <div class="pt-2 pb-2 d-flex flex-column justify-content-center align-items-center">
+                            <p class="fw-bold">Your Score:</p>
+                            <p id="player-score">0</p>
+                        </div>
+                    </div>
+                    <div class="w-25 border shadow bg-body rounded" data-bs-toggle="tooltip" data-bs-placement="top"
+                        title="Round">
+                        <div class="pt-2 pb-2 d-flex flex-column justify-content-center align-items-center">
+                            <p class="fw-bold">Current Round:</p>
+                            <div>
+                                <span id="round-counter">0</span> <span>out of 5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-25 border shadow bg-body rounded">
+                        <div class="pt-2 pb-2 d-flex flex-column justify-content-center align-items-center"
+                            data-bs-toggle="tooltip" data-bs-placement="top" title="Computer Score">
+                            <p class="fw-bold">Computer Score:</p>
+                            <p id="computer-score">0</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="d-flex justify-content-center mt-3">
+                    <div class="w-75 border shadow p-2 bg-body rounded">
+                        <p class="text-center mb-2 fw-bold" id="game-text">
+                            Choose an element below to start the game.
+                        </p>
+                        <div class="d-flex flex-row justify-content-evenly mb-2">
+                            <div class="btn border border-2 border-warning rounded" id="earth-btn">
+                                <img src="/images/earth.svg" alt="" srcset="" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" title="Earth">
+                                <p class="text-center text-warning">Earth</p>
+                            </div>
+                            <div class="btn border border-2 border-info rounded" id="wind-btn">
+                                <img src="/images/wind.svg" alt="" srcset="" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" title="Wind">
+                                <p class="text-center text-info">Wind</p>
+                            </div>
+                            <div class="btn border border-2 border-danger rounded" id="fire-btn">
+                                <img src="/images/fire.svg" alt="" srcset="" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" title="Fire">
+                                <p class="text-center text-danger">Fire</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <footer class="p-2">
+                <div class="d-flex flex-column align-items-center">
+                    <div class="align-self-center">Made with 💟 by: Redmondking</div>
+                    <div class="d-flex flex-row align-content-center">
+                        <a href="https://github.com/redmondking" target="_blank"><i class="bi-github me-3" role="img"
+                                aria-label="GitHub"></i></a>
+                        <a href="https://www.linkedin.com/in/calvin-coleman-7686b2a3/" target="_blank"><i
+                                class="bi-linkedin me-3" role="img" aria-label="Linkedin"></i></a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+
+        <script src="./scripts/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="./scripts/app.js"></script>
+    </body>
+
+</html>
