@@ -53,68 +53,28 @@ fireBtn.onclick = function () {
   //   );
 };
 
-// Refactor playRound function for simplicity.
 function playRound(playerSelection, computerSelection) {
-  if (playerSelection === "earth" && computerSelection === "earth") {
-    gameRoundNum++;
-    roundEl.textContent = gameRoundNum;
-    gameTextEl.textContent = "Tie Game";
-    // console.log(`tie game`);
-  } else if (playerSelection === "earth" && computerSelection === "wind") {
+  if (
+    (playerSelection === "earth" && computerSelection === "wind") ||
+    (playerSelection === "wind" && computerSelection === "fire") ||
+    (playerSelection === "fire" && computerSelection === "earth")
+  ) {
     playerScore++;
     gameRoundNum++;
     roundEl.textContent = gameRoundNum;
     playerEl.textContent = playerScore;
     gameTextEl.textContent = "You Win";
-    // console.log(`you win`);
-  } else if (playerSelection === "earth" && computerSelection === "fire") {
+  } else if (
+    (playerSelection === "earth" && computerSelection === "fire") ||
+    (playerSelection === "wind" && computerSelection === "earth") ||
+    (playerSelection === "wind" && computerSelection === "wind")
+  ) {
     computerScore++;
     gameRoundNum++;
     roundEl.textContent = gameRoundNum;
     computerEl.textContent = computerScore;
     gameTextEl.textContent = "You Lose";
-    // console.log(`you lose`);
-  } else if (playerSelection === "wind" && computerSelection === "wind") {
-    gameRoundNum++;
-    roundEl.textContent = gameRoundNum;
-    gameTextEl.textContent = "Tie Game";
-    // console.log(`tie game`);
-  } else if (playerSelection === "wind" && computerSelection === "fire") {
-    playerScore++;
-    gameRoundNum++;
-    roundEl.textContent = gameRoundNum;
-    playerEl.textContent = playerScore;
-    gameTextEl.textContent = "You Win";
-    // console.log(`you win`);
-  } else if (playerSelection === "wind" && computerSelection === "earth") {
-    computerScore++;
-    gameRoundNum++;
-    roundEl.textContent = gameRoundNum;
-    computerEl.textContent = computerScore;
-    gameTextEl.textContent = "You Lose";
-    // console.log(`you lose`);
-  } else if (playerSelection === "fire" && computerSelection === "fire") {
-    gameRoundNum++;
-    roundEl.textContent = gameRoundNum;
-    gameTextEl.textContent = "Tie Game";
-    // console.log(`tie game`);
-  } else if (playerSelection === "fire" && computerSelection === "earth") {
-    playerScore++;
-    gameRoundNum++;
-    roundEl.textContent = gameRoundNum;
-    playerEl.textContent = playerScore;
-    gameTextEl.textContent = "You Win";
-    // console.log(`you win`);
-  } else if (playerSelection === "wind" && computerSelection === "wind") {
-    computerScore++;
-    gameRoundNum++;
-    roundEl.textContent = gameRoundNum;
-    computerEl.textContent = computerScore;
-    gameTextEl.textContent = "You Lose";
-    // console.log(`you lose`);
-  }
+  } else gameRoundNum++;
+  roundEl.textContent = gameRoundNum;
+  gameTextEl.textContent = "Tie Game";
 }
-
-// earth beats wind
-// wind beats fire
-// fire beats earth
