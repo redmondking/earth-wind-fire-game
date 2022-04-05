@@ -51,13 +51,19 @@
                 </section>
 
                 <section class="row justify-content-evenly mt-2 mt-md-3 mt-xl-4">
-                    <div class="col-md-3 border shadow bg-body rounded">
-                        <div class="pt-2 pb-2 d-flex flex-column justify-content-center align-items-center">
+                    <div class="col-11 col-md-3 border shadow bg-body rounded">
+                        <div class="pt-2 pb-2 d-md-none d-flex flex-column justify-content-center align-items-center">
+                            <p class="fw-bold">Current Round:</p>
+                            <div>
+                                <span id="round-counter-mobile">0</span> <span>out of 5</span>
+                            </div>
+                        </div>
+                        <div class="pt-2 pb-2 d-none d-md-flex flex-column justify-content-center align-items-center">
                             <p class="fw-bold">Your Score:</p>
-                            <p id="player-score">0</p>
+                            <p id="player-score-mobile">0</p>
                         </div>
                     </div>
-                    <div class="col-md-3 mt-2 mt-md-0 border shadow bg-body rounded">
+                    <div class="col-5 col-md-3 mt-2 mt-md-0 border shadow bg-body rounded">
                         <div class="pt-2 pb-2 d-none d-md-flex flex-column justify-content-center align-items-center">
                             <p class="fw-bold">Current Round:</p>
                             <div>
@@ -69,7 +75,7 @@
                             <p id="player-score">0</p>
                         </div>
                     </div>
-                    <div class="col-md-3 mt-2 mt-md-0 border shadow bg-body rounded">
+                    <div class="col-5 col-md-3 mt-2 mt-md-0 border shadow bg-body rounded">
                         <div class="pt-2 pb-2 d-flex flex-column justify-content-center align-items-center"
                             data-bs-toggle="tooltip" data-bs-placement="top" title="Computer Score">
                             <p class="fw-bold">Computer Score:</p>
@@ -105,7 +111,7 @@
                     </div>
                     <div class="col col-md-9 border shadow p-1 p-md-2 bg-body rounded" id="game-over-div">
                         <div class="d-flex flex-column align-items-center p-2">
-                            <p class="mb-3 mt-2 fw-bold" id="game-over-text">
+                            <p class="mb-3 mt-2 fw-bold text-center" id="game-over-text">
                             </p>
                             <p class="mb-3 font-monospace fw-bold">
                                 Click below to start a new game.

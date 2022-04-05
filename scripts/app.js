@@ -1,6 +1,8 @@
 const playerEl = document.getElementById("player-score");
+const playerElMobile = document.getElementById("player-score-mobile");
 const computerEl = document.getElementById("computer-score");
 const roundEl = document.getElementById("round-counter");
+const roundElMobile = document.getElementById("round-counter-mobile");
 const choiceArray = ["Earth", "Wind", "Fire"];
 const earthBtn = document.getElementById("earth-btn");
 const windBtn = document.getElementById("wind-btn");
@@ -33,21 +35,18 @@ earthBtn.onclick = function () {
   playerSelection = choiceArray[0];
   computerPlay();
   playRound(playerSelection, computerSelection);
-  // selectionTextEl.textContent = `You chose ${playerSelection} and the Computer chose ${computerSelection}.`;
 };
 
 windBtn.onclick = function () {
   playerSelection = choiceArray[1];
   computerPlay();
   playRound(playerSelection, computerSelection);
-  // selectionTextEl.textContent = `You chose ${playerSelection} and the Computer chose ${computerSelection}.`;
 };
 
 fireBtn.onclick = function () {
   playerSelection = choiceArray[2];
   computerPlay();
   playRound(playerSelection, computerSelection);
-  // selectionTextEl.textContent = `You chose ${playerSelection} and the Computer chose ${computerSelection}.`;
 };
 
 newGameBtn.onclick = function () {
@@ -77,19 +76,19 @@ function playRound(playerSelection, computerSelection) {
 
 function gameOver() {
   if (playerScore > computerScore) {
-    gameOverEl.textContent = `You beat the Computer with a score of ${playerScore} to ${computerScore}.`;
+    gameOverEl.textContent = `You beat the Computer ${playerScore} to ${computerScore}.`;
     selectionTextEl.textContent = "";
     gameTextEl.textContent = "Choose an element below to start a game.";
     gameOverDiv.classList.remove("d-none");
     gameScreen.classList.add("d-none");
   } else if (playerScore === computerScore) {
-    gameOverEl.textContent = `You tied with the Computer with a score of ${playerScore} to ${computerScore}.`;
+    gameOverEl.textContent = `You tied with the Computer ${playerScore} to ${computerScore}.`;
     gameTextEl.textContent = "Choose an element below to start a game.";
     selectionTextEl.textContent = "";
     gameOverDiv.classList.remove("d-none");
     gameScreen.classList.add("d-none");
   } else
-    gameOverEl.textContent = `You lost to the Computer with a score of ${playerScore} to ${computerScore}.`;
+    gameOverEl.textContent = `You lost to the Computer ${playerScore} to ${computerScore}.`;
   gameTextEl.textContent = "Choose an element below to start a game.";
   selectionTextEl.textContent = "";
   gameOverDiv.classList.remove("d-none");
@@ -100,7 +99,9 @@ function playerWin() {
   playerScore++;
   gameRoundNum++;
   roundEl.textContent = gameRoundNum;
+  roundElMobile.textContent = gameRoundNum;
   playerEl.textContent = playerScore;
+  playerElMobile.textContent = playerScore;
   gameTextEl.textContent = "You Won";
   gameRoundCheck();
 }
@@ -109,6 +110,7 @@ function playerLose() {
   computerScore++;
   gameRoundNum++;
   roundEl.textContent = gameRoundNum;
+  roundElMobile.textContent = gameRoundNum;
   computerEl.textContent = computerScore;
   gameTextEl.textContent = "You Lost";
   gameRoundCheck();
@@ -117,6 +119,7 @@ function playerLose() {
 function playerTie() {
   gameRoundNum++;
   roundEl.textContent = gameRoundNum;
+  roundElMobile.textContent = gameRoundNum;
   gameTextEl.textContent = "Tie Game";
   gameRoundCheck();
 }
@@ -133,7 +136,9 @@ function newGame() {
   computerScore = 0;
   gameRoundNum = 0;
   roundEl.textContent = gameRoundNum;
+  roundElMobile.textContent = gameRoundNum;
   playerEl.textContent = playerScore;
+  playerElMobile.textContent = gameRoundNum;
   computerEl.textContent = computerScore;
   gameOverDiv.classList.add("d-none");
   gameScreen.classList.remove("d-none");
