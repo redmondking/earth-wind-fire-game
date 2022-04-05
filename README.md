@@ -13,3 +13,9 @@ Most logic in app.js was done with guidance from The Odin Project with some devi
 - [x] Implement game round logic
 - [ ] Implement 5 last wins/loss to localstorage
 - [ ] Refactor app.js
+
+### Play Game
+
+See below link to play the game. Hosted by Github Pages:
+
+[Earth, Wind, and Fire](https://redmondking.github.io/earth-wind-fire-game/)
