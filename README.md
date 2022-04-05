@@ -9,6 +9,7 @@ Most logic in app.js was done with guidance from The Odin Project with some devi
 ### Todo
 
 - [ ] Finalize UI Design
-- [ ] Implement Responsiveness for all screen sizes
-- [ ] Implement game round logic
+- [ ] Implement Responsiveness for all screen sizes 📱 💻
+- [x] Implement game round logic
+- [ ] Implement 5 last wins/loss to localstorage
 - [ ] Refactor app.js
